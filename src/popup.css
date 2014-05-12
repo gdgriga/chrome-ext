@@ -1,0 +1,48 @@
+body {
+  padding: 5px 10px;
+  min-width: 300px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+*:focus {
+  outline: 0;
+}
+
+a {
+  display: block;
+  margin: 0;
+  padding: 5px 8px;
+  text-decoration: none;
+}
+
+#readlater {
+  margin: 0 0 5px 0;
+  padding: 0 0 5px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+#readlater a {
+  background-color: #eee;
+  color: #444;
+}
+
+#readlater a:hover {
+  background-color: #777;
+  color: #fff;
+}
+
+#bookmarks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#bookmarks a {
+  color: #900;
+}
+
+#bookmarks a:hover {
+  background-color: #900;
+  color: #fff;
+}
