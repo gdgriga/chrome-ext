@@ -6,7 +6,7 @@
     loadBookmarks();
   });
 
-  var bookmarks = [];
+  var bookmarks = {};
   var loadBookmarks = function() {
     chrome.storage.sync.get(function(items) {
       bookmarks = items.bookmarks || {};
@@ -20,8 +20,8 @@
 
   var readLater = function(link) {
     link.addEventListener('click', function() {
-      chrome.tabs.query({active: true}, function(tab) {
-        bookmarks[tab[0].url] = tab[0].title;
+      chrome.tabs.query({active: true}, function(tabs) {
+        bookmarks[tabs[0].url] = tabs[0].title;
         saveBookmarks();
       });
       window.close();
